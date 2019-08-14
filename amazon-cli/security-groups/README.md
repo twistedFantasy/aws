@@ -27,7 +27,15 @@ To modify egress(outbound) rules "authorize-security-group-egress" should be use
 ```
 $ aws ec2 revoke-security-group-ingress --group-id sg-05cb7c25b43343ff8 --protocol tcp --port 3379 --cidr 0.0.0.0/0 --profile amazon-cli 
 ```
-6. To delete multiple existing ingress(inboud) rules
+6. Update description for existing ingress rule
+```
+$ aws ec2 update-security-group-rule-descriptions-ingress --group-id sg-05cb7c25b43343ff8 --ip-permissions '[{"IpProtocol": "tcp", "FromPort": 3379, "ToPort": 3379, "IpRanges": [{"CidrIp": "0.0.0.0/0", "Description": "Test description"}]}]' --profile amazon-cli
+{
+    "Return": true
+}
+```
+
+7. To delete multiple existing ingress(inboud) rules
 ```
 $ aws ec2 revoke-security-group-ingress --group-id sg-05cb7c25b43343ff8 --ip-permissions IpProtocol=tcp,FromPort=3389,ToPort=3389,IpRanges='[{CidrIp=203.0.113.0/24,Description="RDP access from NY office"}]' IpProtocol=tcp,FromPort=3388,ToPort=3388,IpRanges='[{CidrIp=203.0.113.0/24,Description="Test description"}]' --profile amazon-cli
 ```
