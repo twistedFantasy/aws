@@ -187,3 +187,4 @@ $ aws ec2 associate-route-table --route-table-id rtb-ovDUnWTdsWhAoSD1W --subnet-
 * [Amazon CLI: VPC](https://docs.aws.amazon.com/cli/latest/reference/ec2/index.html#cli-aws-ec2)
 * [Amazon AWS: VPCs and Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html)
 * [Amazon CLI: Create tags](https://docs.aws.amazon.com/cli/latest/reference/ec2/create-tags.html)
+* [AN INTERACTIVE IP ADDRESS AND CIDR RANGE VISUALIZER](http://cidr.xyz/)

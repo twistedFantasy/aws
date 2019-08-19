@@ -14,3 +14,4 @@ $ aws iam attach-role-policy --role-name "TestRole" --policy-arn "arn:aws:iam::a
 ### Useful Resources
 * [Amazon IAM](https://aws.amazon.com/iam/)
 * [Amazon CLI: IAM](https://docs.aws.amazon.com/cli/latest/reference/iam/)
+* [Back to School: Understanding the IAM Policy Grammar](https://aws.amazon.com/blogs/security/back-to-school-understanding-the-iam-policy-grammar/)

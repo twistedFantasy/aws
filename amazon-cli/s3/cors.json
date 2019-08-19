@@ -1,0 +1,12 @@
+{
+  "CORSRules": [
+    {
+      "AllowedOrigins": ["*"],
+      "AllowedMethods": ["HEAD", "GET"]
+    },
+    {
+      "AllowedOrigins": ["http://reporting.test.com"],
+      "AllowedMethods": ["PUT", "POST", "DELETE"]
+    }
+  ]
+}
