@@ -26,3 +26,8 @@ $ aws ec2 run-instances --key-name test --image-id ami-12c5w57b --instance-type 
 ```
 $ aws ec2 associate-address --allocation-id eipalloc-1zPjStq7J086bKuV --instance-id i-FfUyMlxG7wClkAnz --dry-run --profile amazon-cli
 ```
+
+### Useful Resources
+* [Amazon EC2](https://aws.amazon.com/ec2/)
+* [Amazon CLI: EC2](https://docs.aws.amazon.com/cli/latest/reference/ec2/)
+* [Create, Display, and Delete Amazon EC2 Key Pairs](https://docs.aws.amazon.com/cli/latest/userguide/cli-services-ec2-keypairs.html)

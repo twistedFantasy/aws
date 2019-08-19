@@ -25,3 +25,7 @@ $ aws s3api create-bucket --bucket test-bucket --region us-east-1 --profile amaz
 ```
 $ aws s3api put-bucket-cors --bucket test-bucket --cors-configuration file://cors.json --profile amazon-cli
 ```
+
+### Useful Resources
+* [Amazon S3](https://aws.amazon.com/s3/)
+* [Amazon CLI: S3](https://docs.aws.amazon.com/cli/latest/reference/s3api/index.html)
