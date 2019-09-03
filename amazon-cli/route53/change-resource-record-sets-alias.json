@@ -1,0 +1,17 @@
+{
+  "Comment": "Create new subdomain record set",
+  "Changes": [
+    {
+      "Action": "CREATE",
+      "ResourceRecordSet": {
+        "Name": "subdomain2.test.com",
+        "Type": "A",
+        "AliasTarget": {
+          "HostedZoneId": "W29OVFFUYW6P8P",
+          "DNSName": "TestLoadBalancer-2857499238.us-east-1.elb.amazonaws.com",
+          "EvaluateTargetHealth": false
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "Comment": "Create new subdomain record set",
+  "Changes": [
+    {
+      "Action": "CREATE",
+      "ResourceRecordSet": {
+        "Name": "subdomain.test.com",
+        "Type": "A",
+        "TTL": 60,
+        "ResourceRecords": [
+          {
+            "Value": "5.339.235.220"
+          }
+        ]
+      }
+    }
+  ]
+}
