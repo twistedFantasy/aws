@@ -26,7 +26,14 @@ $ aws redshift restore-from-cluster-snapshot --cluster-identifier "redshift-clus
 
 5. Modify existing Amazon Redshift cluster and attach it to 2 new Amazon AWS Security Groups
 ```
-aws redshift modify-cluster --cluster-identifier "redshift-cluster-1" --cluster-security-groups "sg-e9v92MoEMtvohlh6G" "sg-aTYFJUvdWUaD09CGD" --profile test
+$ aws redshift modify-cluster --cluster-identifier "redshift-cluster-1" --cluster-security-groups \
+  "sg-e9v92MoEMtvohlh6G" "sg-aTYFJUvdWUaD09CGD" --profile amazon-cli
+```
+
+6. Delete existing Amazon Redshift cluster
+```
+$ aws redshift delete-cluster --cluster-identifier "redshift-cluster-1" \
+  --skip-final-cluster-snapshot --profile "amazon-cli"
 ```
 
 Useful resources:

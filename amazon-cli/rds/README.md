@@ -71,6 +71,12 @@ aws rds modify-db-instance --db-instance-identifier myrdsdb --apply-immediately 
 --vpc-security-group-ids "sg-0f02e468dcab4200e" --profile amazon-cli
 ```
 
+10. Delete existing Amazon RDS instance
+```
+$ aws rds delete-db-instance --db-instance-identifier "myauroradbcluster" \
+  --skip-final-snapshot --profile "amazon-cli"
+```
+
 ### Useful resources:
 * [Amazon RDS](https://aws.amazon.com/rds/)
 * [Amazon CLI: RDS](https://docs.aws.amazon.com/cli/latest/reference/rds/)
