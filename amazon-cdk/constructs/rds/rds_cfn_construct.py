@@ -2,7 +2,7 @@ from aws_cdk import (
     aws_rds as rds,
     core,
 )
-from aws_cdk.aws_test import StringParameter as Param
+from aws_cdk.aws_ssm import StringParameter as Param
 
 
 class RDSConstruct(core.Construct):
