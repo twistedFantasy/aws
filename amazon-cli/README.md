@@ -1,3 +1,5 @@
+## Configuration
+
 1. Install Amazon CLI
 ```
 $ pip3 install awscli --upgrade --user
@@ -18,6 +20,7 @@ Default output format [None]: json
 ```
 Link: https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html
 
+## Examples
 * [Amazon Virtual Private Cloud(VPC)](./vpc/README.md)
 * [Amazon Security Groups](./security-groups/README.md)
 * [Amazon Redshift](./redshift/README.md)
