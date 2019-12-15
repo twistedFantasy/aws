@@ -11,7 +11,7 @@ class RDSConstruct(core.Construct):
     def object(self):
         return self._rds
 
-    def __init__(self, scope: core.Construct, id: str, *, app_env: str, **kwargs) -> None:
+    def __init__(self, scope: core.Construct, id: str, *, app_env: str, vpc: ec2.Vpc, **kwargs) -> None:
         super().__init__(scope, id, **kwargs)
 
         rds_params = {
@@ -20,7 +20,7 @@ class RDSConstruct(core.Construct):
             'master_username': Param.value_for_string_parameter(self, f'/{app_env}/test/DATABASE_USER'),
             'master_user_password': Param.value_for_string_parameter(self, f'/{app_env}/test/DATABASE_PASSWORD'),
             'db_instance_class': 'db.t3.micro',
-            'db_instance_identifier': f'project-{app_env}-test',
+            'db_instance_identifier': f'open-{app_env}-test',
             'backup_retention_period': 7,
             'delete_automated_backups': True,
             'storage_type': 'gp2',
@@ -33,4 +33,4 @@ class RDSConstruct(core.Construct):
             'copy_tags_to_snapshot': False,
             'multi_az': False,
         }
-        self._rds = rds.CfnDBInstance(self, 'project-rds', **rds_params)
+        self._rds = rds.CfnDBInstance(self, 'open-rds', **rds_params)

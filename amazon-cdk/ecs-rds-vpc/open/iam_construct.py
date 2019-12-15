@@ -10,6 +10,6 @@ class IAMConstruct(core.Construct):
     def __init__(self, scope: core.Construct, id: str, *, app_env: str, **kwargs) -> None:
         super().__init__(scope, id, **kwargs)
 
-        password = core.SecretValue.plain_text(Param.value_for_string_parameter(self, f'/{app_env}/bro/IAM_PASSWORD'))
+        password = core.SecretValue.plain_text(Param.value_for_string_parameter(self, f'/{app_env}/test/IAM_PASSWORD'))
         user = iam.User(self, "open-user", password=password)
-        user.add_managed_policy(iam.ManagedPolicy.from_aws_managed_policy_name("AdministratorAccess"))
+        user.add_managed_policy(iam.ManagedPolicy.from_aws_managed_policy_name("AdministratorAccess"))  # FIXME: subset of required permissions

@@ -17,11 +17,11 @@ class RDSConstruct(core.Construct):
 
         rds_params = {
             'engine': "postgres",
-            'db_name': Param.value_for_string_parameter(self, f'/{app_env}/bro/DATABASE_NAME'),
-            'master_username': Param.value_for_string_parameter(self, f'/{app_env}/bro/DATABASE_USER'),
-            'master_user_password': Param.value_for_string_parameter(self, f'/{app_env}/bro/DATABASE_PASSWORD'),
+            'db_name': Param.value_for_string_parameter(self, f'/{app_env}/test/DATABASE_NAME'),
+            'master_username': Param.value_for_string_parameter(self, f'/{app_env}/test/DATABASE_USER'),
+            'master_user_password': Param.value_for_string_parameter(self, f'/{app_env}/test/DATABASE_PASSWORD'),
             'db_instance_class': 'db.t3.micro',
-            'db_instance_identifier': f'open-{app_env}-bro',
+            'db_instance_identifier': f'open-{app_env}-test',
             'backup_retention_period': 7,
             'delete_automated_backups': True,
             'storage_type': 'gp2',
