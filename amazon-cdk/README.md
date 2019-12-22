@@ -17,6 +17,7 @@ folder contain fully runnable example of application which create custom Amazon 
 * [IAM (Identity & Access Management)](https://aws.amazon.com/iam/)
 * [RDS (Relational Database Services)](https://aws.amazon.com/rds/)
 * [S3 (Simple Storage Service)](https://aws.amazon.com/s3/)
+* [SQS (Simple Queue Service)](https://aws.amazon.com/sqs/)
 
 Useful resources:<br/>
 * [Amazon AWS Constructs](https://docs.aws.amazon.com/cdk/latest/guide/constructs.html)
